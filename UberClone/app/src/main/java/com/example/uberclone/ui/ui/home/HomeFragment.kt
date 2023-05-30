@@ -75,7 +75,7 @@ class HomeFragment : Fragment(), OnMapReadyCallback {
             override fun onLocationResult(locationResult: LocationResult) {
                 val newPos = LatLng(locationResult?.lastLocation?.latitude!!,locationResult.lastLocation?.longitude!!)
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newPos,10f))
-                
+
             }
         }, Looper.myLooper())
     }
